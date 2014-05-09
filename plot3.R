@@ -18,6 +18,9 @@ data[, 2:8] <- lapply(data[, 2:8], as.numeric)
 
 
 # Plot
+
+png(filename="plot3.png", width=480, height=480)
+
 ylab <- "Energy sub metering"
 
 colors <- c("black","red","blue")
@@ -31,5 +34,4 @@ lines(data$Datetime, data$Sub_metering_3, col=colors[3])
 
 legend("topright", legends, lty=c(1,1), col=colors)
 
-dev.copy(png,'plot3.png')
 dev.off ();

@@ -18,6 +18,9 @@ data[, 2:8] <- lapply(data[, 2:8], as.numeric)
 
 
 # Plot
+
+png(filename="plot4.png", width=480, height=480)
+
 layout(matrix(c(1,2,3,4), 2, 2, byrow = TRUE))
 
 # Plot[1,1]
@@ -51,5 +54,4 @@ ylab <- "Global_reactive_power"
 
 plot(data$Datetime, data$Global_reactive_power, type="l", xlab=xlab, ylab=ylab)
 
-dev.copy(png,'plot4.png')
 dev.off ();

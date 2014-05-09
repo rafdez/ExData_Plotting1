@@ -18,9 +18,11 @@ data[, 2:8] <- lapply(data[, 2:8], as.numeric)
 
 
 # Plot
+
+png(filename="plot2.png", width=480, height=480)
+
 ylab <- "Global Active Power (kilowatts)"
 
 plot(data$Datetime, data$Global_active_power, type="l", xlab="", ylab=ylab)
 
-dev.copy(png,'plot2.png')
 dev.off ();
